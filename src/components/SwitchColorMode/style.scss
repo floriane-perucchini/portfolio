@@ -1,0 +1,52 @@
+@use '../../styles/vars.scss' as vars;
+
+
+.switch {
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 5px;
+  right: 0;
+  bottom: 5px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  background-color: vars.$rosy-brown-color;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: vars.$dark-background-color;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px vars.$rosy-brown-color;
+}
+
+.slider.round {
+  border-radius: 40px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

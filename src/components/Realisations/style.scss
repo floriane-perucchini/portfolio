@@ -1,0 +1,120 @@
+@use '../../styles/vars' as vars;
+
+.realisationSection{
+  border-top: 3px solid vars.$rosy-brown-color;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.realisationTitle{
+  font-family: vars.$title-font-family;
+  font-size: 4rem;
+  text-align: center;
+  margin: 1rem;
+  padding: 2rem;
+}
+
+.realisationContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.projetContainer{
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.description-projet-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.projetTitle{
+  font-family: vars.$title-font-family;
+  color: vars.$rosy-brown-color;
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  border: none;
+  cursor: pointer;
+  border-bottom: 2px solid vars.$antique-pink-color;
+  background-color: transparent;
+  z-index: 1;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+
+  &:hover{
+    transform: scale(1.1);
+    background-color: vars.$rosy-brown-color;
+    color: vars.$dark-background-color;
+  }
+
+}
+
+.selected{
+  background-color: vars.$antique-pink-color;
+}
+
+.projetImage{
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out; 
+  border: 2px solid vars.$dark-background-color;
+  border-radius: 20px;
+}
+
+.linkContainer{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.projetLink{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin: 1rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: vars.$rosy-brown-color;
+}
+
+.projetDescription{
+  font-size: 1.3rem;
+  font-weight: 500;
+  width: 300px;
+  margin: 1rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  .projetContainer{
+    flex-direction: column;
+  }
+
+  .projetImage{
+    width: 100%;
+    height: 100%;
+  }
+
+  .projetDescription{
+    width: 90%;
+  }
+
+  .realisationContainer{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

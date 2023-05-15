@@ -1,0 +1,56 @@
+@use '../../styles/vars' as vars;
+
+.footer {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-width: 900px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 3rem;
+  margin: auto;
+
+
+  &__navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  
+    &-link{
+      z-index: 1;
+      font-family: vars.$body-font-family;
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-decoration: none;
+      padding: 1rem;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: vars.$dark-background-color;
+      text-shadow: -1px -1px 0 vars.$antique-pink-color, 1px -1px 0 vars.$antique-pink-color, -1px 1px 0 vars.$antique-pink-color, 1px 1px 0 vars.$antique-pink-color;
+       
+
+      &:hover{
+        color: vars.$rosy-brown-color;
+      }
+
+      &-logo{
+        color: vars.$antique-pink-color;
+      }
+
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navigation-name{
+    display: none;
+  }  
+}

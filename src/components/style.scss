@@ -1,0 +1,20 @@
+@use '../styles/vars.scss' as vars;
+
+.App{
+    padding: 0rem;
+    text-align: center;
+    min-height: 100vh;
+    height: 100%;
+    font-family: vars.$body-font-family, sans-serif;
+}
+
+.light{
+    background-color: vars.$light-background-color;
+    color: vars.$dark-background-color;
+}
+
+.dark{
+  background-color: vars.$dark-background-color;
+  color: vars.$light-background-color;
+}
+

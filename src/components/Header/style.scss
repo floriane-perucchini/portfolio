@@ -1,0 +1,59 @@
+@use '../../styles/vars.scss' as vars;
+
+
+.header{
+  margin: auto;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__presentation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  
+    &-link{
+      z-index: 1;
+      font-family: vars.$body-font-family;
+      font-size: 1.5rem;
+      font-weight: 400;
+      text-decoration: none;
+      padding: 1rem;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: vars.$rosy-brown-color;
+      // text-shadow: -1px -1px 0 vars.$antique-pink-color, 1px -1px 0 vars.$antique-pink-color, -1px 1px 0 vars.$antique-pink-color, 1px 1px 0 vars.$antique-pink-color;
+       
+
+      &:hover{
+        color: vars.$antique-pink-color;
+      }
+    }
+  }
+
+}
+
+
+.title{
+  z-index: 1;
+  font-family: vars.$title-font-family, cursive;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: vars.$rosy-brown-color;
+  text-decoration: none;
+  padding: 1rem;
+}
