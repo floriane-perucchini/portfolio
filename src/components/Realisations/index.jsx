@@ -10,7 +10,6 @@ function Realisations() {
 
   const handleChangeProject = (event) => { 
     setSelectedProject(event.target.value);
-    console.log(event.target.value);
   };
 
 
